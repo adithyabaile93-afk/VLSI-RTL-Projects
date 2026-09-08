@@ -1,0 +1,14 @@
+module counter_4bit (
+    input CLK,
+    input RESET,
+    output reg [3:0] Q
+);
+
+always @(posedge CLK) begin
+    if (RESET)
+        Q <= 4'b0000;
+    else
+        Q <= Q + 1'b1;
+end
+
+endmodule
